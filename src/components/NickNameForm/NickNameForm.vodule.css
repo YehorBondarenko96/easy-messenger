@@ -1,0 +1,13 @@
+.formName{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.input{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #959896;
+    padding: 0 10px;
+}
