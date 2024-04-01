@@ -1,0 +1,25 @@
+.auxiliaryDiv{
+    flex: 1;
+}
+
+.divChat{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.yourMessage{
+    background-color: #998f62;
+    margin-left: auto;
+}
+
+.usersMessage{
+    background-color: #5ea658;
+    
+}
+
+.message{
+    padding: 20px;
+    border-radius: 20px;
+    max-width: fit-content;
+}
