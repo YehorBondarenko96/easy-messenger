@@ -85,7 +85,6 @@ function App() {
 
       allDivApp.style.margin = `${realScreenW / 50}px`;
       allDivApp.style.flex = '1';
-
     }
   });
 

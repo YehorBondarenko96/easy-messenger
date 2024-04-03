@@ -1,11 +1,13 @@
-import React from 'react';
 import css from "./NickNameForm.module.css";
+import { useRef, useEffect } from 'react';
 
 interface NickNameFormProps {
     onSubName: (name: string) => void;
 }
 
 export const NickNameForm: React.FC<NickNameFormProps> = ({ onSubName }) => {
+    const formNameRef = useRef<HTMLFormElement>(null);
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const input = event.currentTarget.elements.namedItem('nickname') as HTMLInputElement;
@@ -15,14 +17,20 @@ export const NickNameForm: React.FC<NickNameFormProps> = ({ onSubName }) => {
     }
     };
 
+    useEffect(() => {
+        if (formNameRef.current) {
+            
+        }
+    });
+
     return (
-    <form className={css.form} onSubmit={handleSubmit}>
+    <form ref={formNameRef} className={css.form} onSubmit={handleSubmit}>
         <input
         id="nickname"
         className= {css.input}
         placeholder="Please, enter your name"
         />
-        <button type="submit">Submit</button>
+        <button className={css.button} type="submit">Submit</button>
     </form>
     );
 };
